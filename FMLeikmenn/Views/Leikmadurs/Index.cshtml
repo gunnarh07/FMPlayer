@@ -1,0 +1,458 @@
+﻿@model IEnumerable<FMLeikmenn.Models.Leikmadur>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Name)
+        </td>
+        @foreach (var item in Model)
+        {
+            <th>
+                @Html.DisplayFor(modelItem => item.Name)
+                <div>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </div>
+            </th>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.DateStamp)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modelItem => item.DateStamp)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Position)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Position)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Corners)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Corners)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Crossing)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Crossing)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Dribbling)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Dribbling)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Finishing)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Finishing)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.FirstTouch)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.FirstTouch)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.FreeKickTaking)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.FreeKickTaking)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Heading)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Heading)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.LongShots)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.LongShots)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.LongThrows)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.LongThrows)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Marking)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Marking)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Passing)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Passing)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.PenaltyTaking)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.PenaltyTaking)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Tackling)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Tackling)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Technique)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Technique)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Aggression)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Aggression)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Anticipation)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Anticipation)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Bravery)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Bravery)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Composure)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Composure)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Concentration)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Concentration)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Decisions)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Decisions)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Determination)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Determination)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Flair)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Flair)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Leadership)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Leadership)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.OffTheBall)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.OffTheBall)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Positioning)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Positioning)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Teamwork)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Teamwork)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Vision)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Vision)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.WorkRate)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.WorkRate)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Acceleration)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Acceleration)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Agility)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Agility)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Balance)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Balance)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.JumpingReach)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.JumpingReach)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.NatuaralFitnes)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.NatuaralFitnes)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Pace)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Pace)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Stamina)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Stamina)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.Strength)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.Strength)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.GoalkeeperRating)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.GoalkeeperRating)                
+            </td>
+        }
+    </tr>
+</table>
