@@ -67,3 +67,7 @@ c:\users\gunnar\documents\visual studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\
 c:\users\gunnar\documents\visual studio 2015\Projects\FMLeikmenn\FMLeikmenn\obj\Debug\FMLeikmenn.csprojResolveAssemblyReference.cache
 c:\users\gunnar\documents\visual studio 2015\Projects\FMLeikmenn\FMLeikmenn\obj\Debug\FMLeikmenn.dll
 c:\users\gunnar\documents\visual studio 2015\Projects\FMLeikmenn\FMLeikmenn\obj\Debug\FMLeikmenn.pdb
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\PagedList.dll
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\PagedList.Mvc.dll
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\PagedList.xml
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\PagedList.Mvc.xml

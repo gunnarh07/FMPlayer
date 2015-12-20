@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using FMLeikmenn.Models;
 
 namespace FMLeikmenn.Controllers
@@ -15,11 +16,40 @@ namespace FMLeikmenn.Controllers
         private LeikmadurDBContext db = new LeikmadurDBContext();
 
         // GET: Leikmadurs
-        public ActionResult Index()
-        {
-            return View(db.Leikmenn.ToList());
-        }
+        //public ActionResult Index()
+        //{
+        //    return View(db.Leikmenn.ToList());           
+        //}
 
+        public ActionResult Index(string sortOrder, string searchString)
+        {
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var leikmenn = from s in db.Leikmenn
+                           select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                leikmenn = leikmenn.Where(s => s.Name.Contains(searchString)
+                || s.Position.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    leikmenn = leikmenn.OrderByDescending(s => s.Name);
+                    break;
+                case "Date":
+                    leikmenn = leikmenn.OrderBy(s => s.Position);
+                    break;
+                case "date_desc":
+                    leikmenn = leikmenn.OrderByDescending(s => s.Position);
+                    break;
+                default:
+                    leikmenn = leikmenn.OrderBy(s => s.Name);
+                    break;
+            }
+            return View(leikmenn.ToList());
+        }
         // GET: Leikmadurs/Details/5
         public ActionResult Details(int? id)
         {
