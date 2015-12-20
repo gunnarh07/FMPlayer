@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table">    
     <tr>
         <td>
             @Html.DisplayNameFor(model => model.Name)
@@ -45,6 +45,17 @@
         {
             <td>
                 @Html.DisplayFor(model => item.Position)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.AveragePlayerRating)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.AveragePlayerRating)
             </td>
         }
     </tr>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using System.ComponentModel.DataAnnotations;
+///using System.Web.Mvc;
 
 namespace FMLeikmenn.Models
 {
@@ -52,7 +53,22 @@ namespace FMLeikmenn.Models
         public int Stamina { get; set; }
         public int Strength { get; set; }
         public int GoalkeeperRating { get; set; }
+        //public int AverageOverall = Position + crossing;//{ get; set; }
+
+        public double AveragePlayerRating
+        {
+            get
+            {
+                return (Corners + Crossing + Dribbling + Finishing + FirstTouch + FreeKickTaking + Heading + LongShots +
+                    LongThrows + Marking + Passing + PenaltyTaking +  Tackling + Technique + Aggression + Anticipation +
+                    Bravery + Composure + Concentration + Decisions + Determination + Flair + Leadership + OffTheBall +
+                    Positioning + Teamwork + Vision + WorkRate + Acceleration + Agility + Balance + JumpingReach + 
+                    NatuaralFitnes + Pace + Stamina + Strength)/36;
+            }
+}
+        //public IEnumerable<SelectListItem> Positions { get; set; }
     }
+    
 
     public class LeikmadurDBContext : DbContext
     {
