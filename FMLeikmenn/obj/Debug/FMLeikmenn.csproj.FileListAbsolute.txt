@@ -71,3 +71,7 @@ C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\
 C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\PagedList.Mvc.dll
 C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\PagedList.xml
 C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\bin\PagedList.Mvc.xml
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\obj\Debug\FMLeikmenn.Migrations.InitialCreate.resources
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\obj\Debug\FMLeikmenn.csproj.GenerateResource.Cache
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\obj\Debug\FMLeikmenn.Migrations.Leikmadur.resources
+C:\Users\Gunnar\Documents\Visual Studio 2015\Projects\FMLeikmenn\FMLeikmenn\obj\Debug\FMLeikmenn.Migrations.TeamPlayerContractedTo.resources

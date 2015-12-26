@@ -21,18 +21,29 @@ namespace FMLeikmenn.Controllers
         //    return View(db.Leikmenn.ToList());           
         //}
 
-        public ActionResult Index(string sortOrder, string searchString)
+        public ActionResult Index(string option, string sortOrder, string searchString, string searchString1)
         {
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
-            var leikmenn = from s in db.Leikmenn
+            //ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            //var find = from s in db.Leikmenn
+            //        where 
+
+
+
+               var leikmenn = from s in db.Leikmenn
                            select s;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                leikmenn = leikmenn.Where(s => s.Name.Contains(searchString)
-                || s.Position.Contains(searchString));
+                leikmenn = leikmenn.Where(s => s.Name.Contains(searchString));
+                //|| s.Position.Contains(searchString));
             }
+            if (!String.IsNullOrEmpty(searchString1))
+            {
+                leikmenn = leikmenn.Where(s => s.Position.Contains(searchString1));
+                //|| s.Position.Contains(searchString));
+            }
+            /*
             switch (sortOrder)
             {
                 case "name_desc":
@@ -47,7 +58,7 @@ namespace FMLeikmenn.Controllers
                 default:
                     leikmenn = leikmenn.OrderBy(s => s.Name);
                     break;
-            }
+            }*/
             return View(leikmenn.ToList());
         }
         // GET: Leikmadurs/Details/5
@@ -76,7 +87,7 @@ namespace FMLeikmenn.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,DateStamp,Position,Corners,Crossing,Dribbling,Finishing,FirstTouch,FreeKickTaking,Heading,LongShots,LongThrows,Marking,Passing,PenaltyTaking,Tackling,Technique,Aggression,Anticipation,Bravery,Composure,Concentration,Decisions,Determination,Flair,Leadership,OffTheBall,Positioning,Teamwork,Vision,WorkRate,Acceleration,Agility,Balance,JumpingReach,NatuaralFitnes,Pace,Stamina,Strength,GoalkeeperRating")] Leikmadur leikmadur)
+        public ActionResult Create([Bind(Include = "ID,Name,DateStamp,Position,Corners,Crossing,Dribbling,Finishing,FirstTouch,FreeKickTaking,Heading,LongShots,LongThrows,Marking,Passing,PenaltyTaking,Tackling,Technique,Aggression,Anticipation,Bravery,Composure,Concentration,Decisions,Determination,Flair,Leadership,OffTheBall,Positioning,Teamwork,Vision,WorkRate,Acceleration,Agility,Balance,JumpingReach,NatuaralFitnes,Pace,Stamina,Strength,GoalkeeperRating,TeamPlayerContractedTo")] Leikmadur leikmadur)
         {
             if (ModelState.IsValid)
             {
@@ -108,7 +119,7 @@ namespace FMLeikmenn.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,DateStamp,Position,Corners,Crossing,Dribbling,Finishing,FirstTouch,FreeKickTaking,Heading,LongShots,LongThrows,Marking,Passing,PenaltyTaking,Tackling,Technique,Aggression,Anticipation,Bravery,Composure,Concentration,Decisions,Determination,Flair,Leadership,OffTheBall,Positioning,Teamwork,Vision,WorkRate,Acceleration,Agility,Balance,JumpingReach,NatuaralFitnes,Pace,Stamina,Strength,GoalkeeperRating")] Leikmadur leikmadur)
+        public ActionResult Edit([Bind(Include = "ID,Name,DateStamp,Position,Corners,Crossing,Dribbling,Finishing,FirstTouch,FreeKickTaking,Heading,LongShots,LongThrows,Marking,Passing,PenaltyTaking,Tackling,Technique,Aggression,Anticipation,Bravery,Composure,Concentration,Decisions,Determination,Flair,Leadership,OffTheBall,Positioning,Teamwork,Vision,WorkRate,Acceleration,Agility,Balance,JumpingReach,NatuaralFitnes,Pace,Stamina,Strength,GoalkeeperRating,TeamPlayerContractedTo")] Leikmadur leikmadur)
         {
             if (ModelState.IsValid)
             {
