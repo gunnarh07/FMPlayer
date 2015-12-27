@@ -1,0 +1,578 @@
+﻿@model IEnumerable<FMLeikmenn.Models.GoalKeeper>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+    
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        @foreach (var item in Model)
+        {
+            <th>
+                @Html.DisplayFor(modeliItem => item.Name)
+
+
+                <div>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </div>
+            </th>   
+        }                    
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TeamPlayerContractedTo)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.TeamPlayerContractedTo)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DateStamp)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.DateStamp)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Position)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.AverageGoalKeeperRating)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.AverageGoalKeeperRating)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.GKDefend)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.GKDefend)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.SGKDefend)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.SGKDefend)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.SGKSupport)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.SGKSupport)
+            </td>
+        }
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayNameFor(model => model.SGKAttac)
+        </td>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(model => item.SGKAttac)
+            </td>
+        }
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AerialAbility)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.AerialAbility)
+            </td>
+        }
+        <th>
+    </tr>        
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CommanOfArea)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.CommanOfArea)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Communication)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Communication)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Eccentricity)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Eccentricity)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstTouch)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.FirstTouch)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FreeKickTaking)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.FreeKickTaking)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Handling)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Handling)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kicking)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Kicking)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OneOnOne)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.OneOnOne)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PeanaltyTacking)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.PeanaltyTacking)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Reflexes)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Reflexes)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RushingOut)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.RushingOut)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TendencyToPunch)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.TendencyToPunch)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Throwing)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Throwing)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Aggression)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Aggression)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Anticipation)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Anticipation)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bravery)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Bravery)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Composure)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Composure)
+            </td>
+        }
+        <th>
+    </tr>       
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Concentration)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Concentration)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Decisions)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Decisions)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Determination)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Determination)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Flair)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Flair)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Leadership)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Leadership)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OffTheBall)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.OffTheBall)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Positioning)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Positioning)
+            </td>
+        }
+        <th>
+    </tr>
+
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Teamwork)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Teamwork)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vision)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Vision)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkRate)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.WorkRate)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Acceleration)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Acceleration)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Agility)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Agility)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Balance)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JumpingReach)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.JumpingReach)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NaturalFitnesss)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.NaturalFitnesss)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pace)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Pace)
+            </td>
+        }
+        <th>
+    </tr>     
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Stamina)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Stamina)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Strength)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Strength)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Technique)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.Technique)
+            </td>
+        }
+        <th>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OutfieldRating)
+        </th>
+        @foreach (var item in Model)
+        {
+            <td>
+                @Html.DisplayFor(modeliItem => item.OutfieldRating)
+            </td>
+        }        
+    </tr>
+</table>
