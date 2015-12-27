@@ -21,29 +21,14 @@ namespace FMLeikmenn.Controllers
         //    return View(db.Leikmenn.ToList());           
         //}
 
-        public ActionResult Index(string option, string sortOrder, string searchString, string searchString1)
+        public ActionResult Index(string option, string sortOrder, string searchString, string searchString1, string[] Pos)
         {
-            //ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
-            //var find = from s in db.Leikmenn
-            //        where 
-
-
-
-               var leikmenn = from s in db.Leikmenn
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var leikmenn = from s in db.Leikmenn
                            select s;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                leikmenn = leikmenn.Where(s => s.Name.Contains(searchString));
-                //|| s.Position.Contains(searchString));
-            }
-            if (!String.IsNullOrEmpty(searchString1))
-            {
-                leikmenn = leikmenn.Where(s => s.Position.Contains(searchString1));
-                //|| s.Position.Contains(searchString));
-            }
-            /*
+            //var find = from s in db.Leikmenn
+            //      where 
             switch (sortOrder)
             {
                 case "name_desc":
@@ -58,7 +43,32 @@ namespace FMLeikmenn.Controllers
                 default:
                     leikmenn = leikmenn.OrderBy(s => s.Name);
                     break;
-            }*/
+            }
+
+
+            
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                leikmenn = leikmenn.Where(s => s.Name.Contains(searchString));
+                //|| s.Position.Contains(searchString));
+            }
+            if (!String.IsNullOrEmpty(searchString1))
+            {
+                leikmenn = leikmenn.Where(s => s.Position.Contains(searchString1));
+                //|| s.Position.Contains(searchString));
+            }
+           
+            
+            if (Pos != null)
+            {
+                //leikmenn = leikmenn.Where(s => Pos.Contains(Pos[c]));
+                leikmenn = from s in leikmenn
+                           where Pos.Contains(s.Position)
+                           select s;
+            }
+            
+            
             return View(leikmenn.ToList());
         }
         // GET: Leikmadurs/Details/5

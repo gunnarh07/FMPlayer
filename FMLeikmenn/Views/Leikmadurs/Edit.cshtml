@@ -40,11 +40,68 @@
                 @Html.ValidationMessageFor(model => model.DateStamp, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        @*
+    <div class="form-group">
+        @Html.LabelFor(model => model.Position, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+        </div>
+    </div>
+        *@
+        @{
+            List<SelectListItem> posItems = new List<SelectListItem>();
+            posItems.Add(new SelectListItem
+            {
+                Text = "--select Position--",
+                Value = "",
+                Selected = true
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "DC",
+                Value = "DC"
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "DR",
+                Value = "DR",
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "DL",
+                Value = "DL",
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "MC",
+                Value = "MC",
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "AMC",
+                Value = "AMC",
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "AMR",
+                Value = "AMR",
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "AML",
+                Value = "AML",
+            });
+            posItems.Add(new SelectListItem
+            {
+                Text = "SC",
+                Value = "SC",
+            });
+        }
         <div class="form-group">
             @Html.LabelFor(model => model.Position, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Position, posItems, "--select Position--")
                 @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
             </div>
         </div>
